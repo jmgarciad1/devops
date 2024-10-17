@@ -1,7 +1,7 @@
 from .base_command import BaseCommannd
 from ..models.blacklist import Blacklist, BlacklistSchema
 from ..session import Session
-from ..errors.errors import IncompleteParams
+from ..errors.errors import IncompleteParams, EmailExist
 
 class CreateBlacklist(BaseCommannd):
     def __init__(self, data, ip=None):
@@ -11,6 +11,11 @@ class CreateBlacklist(BaseCommannd):
 
     def execute(self):
         try:
+
+            item = session.query(Blacklist).filter_by(email=self.email).all()
+
+            if len(item) > 0:
+                raise EmailExist()
 
             load_data = BlacklistSchema(
                 only=('email', 'app_uuid', 'blocked_reason', 'ip')

@@ -10,8 +10,8 @@ services:
     container_name: container_db_posts
     environment:
       POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: postgres
-      POSTGRES_DB: db_posts
+      POSTGRES_PASSWORD: I4]E1)D2hZFo2iTA
+      POSTGRES_DB: db-posts
     ports:
       - "5432:5432"
     volumes:
@@ -27,9 +27,9 @@ services:
     environment:
       DB_HOST: container_db_posts
       DB_PORT: 5432
-      DB_NAME: db_posts
+      DB_NAME: db-posts
       DB_USER: postgres
-      DB_PASSWORD: postgres
+      DB_PASSWORD: I4]E1)D2hZFo2iTA
     ports:
       - "3000:3000"
     depends_on:

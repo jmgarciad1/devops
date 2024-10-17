@@ -2,45 +2,45 @@
 version: "3.8"
 
 services:      
-  posts_db:
+  blacklist_db:
     image: postgres:latest
     networks:
-      - post_net
+      - blacklist_net
     restart: always
-    container_name: container_db_posts
+    container_name: container_db_blacklist
     environment:
       POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: I4]E1)D2hZFo2iTA
-      POSTGRES_DB: db-posts
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: db-blacklist
     ports:
       - "5432:5432"
     volumes:
-      - posts-db-data:/var/lib/postgresql/data
+      - blacklist-db-data:/var/lib/postgresql/data
       
-  posts_app:
-    build: ./posts/
+  blacklist_app:
+    build: ./blacklists/
     networks:
       - app_net
-      - post_net
+      - blacklist_net
     restart: always
-    container_name: container_app_posts
+    container_name: container_app_blacklist
     environment:
-      DB_HOST: container_db_posts
+      DB_HOST: container_db_blacklist
       DB_PORT: 5432
-      DB_NAME: db-posts
+      DB_NAME: db-blacklist
       DB_USER: postgres
-      DB_PASSWORD: I4]E1)D2hZFo2iTA
+      DB_PASSWORD: postgres
     ports:
       - "3000:3000"
     depends_on:
-      - posts_db
+      - blacklist_db
 
 volumes:
-  posts-db-data:
+  blacklist-db-data:
     driver: local
 
 networks:
   app_net:
     name: app_net
-  post_net:
-    name: post_net
+  blacklist_net:
+    name: blacklist_net

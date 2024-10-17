@@ -2,12 +2,6 @@ class ApiError(Exception):
     code = 422
     description = "Default message"
 
-
-class InvalidDate(ApiError):
-    code = 412
-    description = "La fecha expiración no es válida"
-
-
 class IncompleteParams(ApiError):
     code = 400
     description = "Bad request"
@@ -23,14 +17,6 @@ class Unauthorized(ApiError):
     description = "Unauthorized"
 
 
-class PostNotFoundError(ApiError):
+class NotFoundError(ApiError):
     code = 404
-    description = "Route does not exist"
-
-
-class ExternalError(ApiError):
-    code = 422  # Default
-    description = "External error"
-
-    def __init__(self, code):
-        self.code = code
+    description = "Item does not exist"

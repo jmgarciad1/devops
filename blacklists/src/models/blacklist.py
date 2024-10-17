@@ -19,17 +19,3 @@ class Blacklist(Model, Base):
         self.app_uuid = app_uuid
         self.blocked_reason = blocked_reason
         self.ip = ip
-
-# Especificación de los campos que estarán presentes al serializar el objeto como JSON
-class BlacklistSchema(Schema):
-    id = fields.UUID()
-    email = fields.String()
-    app_uuid = fields.UUID()
-    blocked_reason = fields.String()
-    ip = fields.String()
-    createdAt = fields.DateTime()
-
-# Respuesta de la existencia de un email en la lista negra
-class ResponseExistEmailSchema(Schema):
-    exist = fields.Boolean()
-    blocked_reason = fields.String()

@@ -13,7 +13,7 @@ class CreateBlacklist(BaseCommannd):
         try:
 
             load_data = BlacklistSchema(
-                only=('email', 'app_uuid', 'blocked_reason')
+                only=('email', 'app_uuid', 'blocked_reason', 'ip')
             ).load(self.data)
             
             blacklist = Blacklist(**load_data)

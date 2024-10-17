@@ -6,13 +6,15 @@ from ..errors.errors import IncompleteParams, EmailExist
 class CreateBlacklist(BaseCommannd):
     def __init__(self, data, ip=None):
         self.data = data
+        self.email = data['email']
         if ip != None:
             self.data['ip'] = ip
 
     def execute(self):
         try:
 
-            item = session.query(Blacklist).filter_by(email=self.data['email']).all()
+            session = Session()
+            item = session.query(Blacklist).filter_by(email=self.email).all()
 
             if len(item) > 0:
                 raise EmailExist()

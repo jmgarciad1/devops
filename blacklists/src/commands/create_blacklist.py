@@ -12,7 +12,7 @@ class CreateBlacklist(BaseCommannd):
     def execute(self):
         try:
 
-            item = session.query(Blacklist).filter_by(email=self.email).all()
+            item = session.query(Blacklist).filter_by(email=self.data['email']).all()
 
             if len(item) > 0:
                 raise EmailExist()

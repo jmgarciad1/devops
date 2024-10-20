@@ -11,7 +11,7 @@ services:
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
-      POSTGRES_DB: db-blacklist
+      POSTGRES_DB: db_blacklist
     ports:
       - "5432:5432"
     volumes:
@@ -27,7 +27,7 @@ services:
     environment:
       DB_HOST: container_db_blacklist
       DB_PORT: 5432
-      DB_NAME: db-blacklist
+      DB_NAME: db_blacklist
       DB_USER: postgres
       DB_PASSWORD: postgres
     ports:

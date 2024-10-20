@@ -10,9 +10,9 @@ class SessionConfig():
     def url(self):
         db_user = 'postgres'
         db_pass = 'postgres'
-        db_host = 'container_db_blacklist'
+        db_host = 'blacklists-postgres.cxewsuko42nv.us-east-1.rds.amazonaws.com'
         db_port = 5432
-        db_name = 'db-blacklist'
+        db_name = 'db_blacklist'
         return f'postgresql://{db_user}:{db_pass}@{db_host}:{db_port}/{db_name}'
 
 

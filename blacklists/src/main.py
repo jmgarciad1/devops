@@ -4,7 +4,6 @@ from .models.model import Base
 from .session import Session, engine
 from flask import Flask, jsonify
 
-
 app = Flask(__name__)
 app.register_blueprint(blacklists_blueprint)
 

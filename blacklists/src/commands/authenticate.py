@@ -1,5 +1,5 @@
-from .base_command import BaseCommannd
-from ..errors.errors import NotToken, TokenInvalid
+from blacklists.src.commands.base_command import BaseCommannd
+from blacklists.src.errors.errors import NotToken, TokenInvalid
 
 def verify_token(token):
     

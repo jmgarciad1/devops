@@ -1,7 +1,7 @@
-from .base_command import BaseCommannd
-from ..models.blacklist import Blacklist, BlacklistSchema
-from ..session import Session
-from ..errors.errors import IncompleteParams, EmailExist
+from blacklists.src.commands.base_command import BaseCommannd
+from blacklists.src.models.blacklist import Blacklist, BlacklistSchema
+from blacklists.src.session import Session
+from blacklists.src.errors.errors import IncompleteParams, EmailExist
 
 class CreateBlacklist(BaseCommannd):
     def __init__(self, data, ip=None):

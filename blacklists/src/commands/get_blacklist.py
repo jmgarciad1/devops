@@ -1,8 +1,7 @@
-from .base_command import BaseCommannd
-from ..models.blacklist import Blacklist
-from ..session import Session
-from ..errors.errors import InvalidParams
-
+from blacklists.src.commands.base_command import BaseCommannd
+from blacklists.src.models.blacklist import Blacklist
+from blacklists.src.session import Session
+from blacklists.src.errors.errors import InvalidParams
 
 class GetBlacklist(BaseCommannd):
     def __init__(self, email):

@@ -4,11 +4,10 @@ from blacklists.src.models.model import Base
 from blacklists.src.session import Session, engine
 from flask import Flask
 
-app = Flask(__name__)
-app.register_blueprint(blacklists_blueprint)
+application = Flask(__name__)
+application.register_blueprint(blacklists_blueprint)
 
 Base.metadata.create_all(engine)
 
 if __name__ == "__main__":
-    app.debug = True
-    app.run()
+    application.run(port = 5000, debug = True)

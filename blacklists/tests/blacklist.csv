@@ -1,3 +1,0 @@
-id,email,app_uuid,blocked_reason,ip,createdAt
-0e0bb589-002a-46c5-8288-bb5d77cdb6e1,email_test@gmail.com,bf8792d2-3097-11ee-be56-0242ac1200020,blocked_reason_test,127.0.0.1,2024-10-29 00:00:00
-7fa4cbcd-0f07-4ab4-a786-8629621c4ac4,email_test_7fa4cbcd-0f07-4ab4-a786-8629621c4ac4@gmail.com,7fa4cbcd-0f07-4ab4-a786-8629621c4ac4,blocked_reason_test,127.0.0.1,2024-10-29 00:00:00

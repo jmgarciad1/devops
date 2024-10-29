@@ -1,10 +1,10 @@
-from flask import Flask, jsonify, request, Blueprint
+from flask import jsonify, request, Blueprint
 from commands.authenticate import Authenticate
 from commands.create_blacklist import CreateBlacklist
 from commands.get_blacklist import GetBlacklist
 from errors.errors import TokenInvalid
-blacklists_blueprint = Blueprint('blacklists', __name__)
 
+blacklists_blueprint = Blueprint('blacklists', __name__)
 
 @blacklists_blueprint.route('/blacklists', methods=['POST'])
 def create():

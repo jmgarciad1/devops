@@ -1,5 +1,5 @@
-from blacklists.src.commands.create_blacklist import CreateBlacklist
-from blacklists.src.commands.get_blacklist import GetBlacklist
+from commands.create_blacklist import CreateBlacklist
+from commands.get_blacklist import GetBlacklist
 
 import uuid
 import blacklists.tests.funtions as f

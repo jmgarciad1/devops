@@ -1,6 +1,6 @@
 from marshmallow import Schema, fields
 from sqlalchemy import Column, String
-from blacklists.src.models.model import Model, Base
+from models.model import Model, Base
 import uuid
 from sqlalchemy.dialects.postgresql import UUID
 

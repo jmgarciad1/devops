@@ -1,8 +1,8 @@
 from flask import Flask, jsonify, request, Blueprint
-from blacklists.src.commands.authenticate import Authenticate
-from blacklists.src.commands.create_blacklist import CreateBlacklist
-from blacklists.src.commands.get_blacklist import GetBlacklist
-from blacklists.src.errors.errors import TokenInvalid
+from commands.authenticate import Authenticate
+from commands.create_blacklist import CreateBlacklist
+from commands.get_blacklist import GetBlacklist
+from errors.errors import TokenInvalid
 blacklists_blueprint = Blueprint('blacklists', __name__)
 
 

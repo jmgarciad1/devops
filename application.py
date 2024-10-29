@@ -1,7 +1,7 @@
 from blacklists.src.errors.errors import ApiError
 from blacklists.src.blueprints.blacklists import blacklists_blueprint
 from blacklists.src.models.model import Base
-from blacklists.src.session import Session, engine
+from blacklists.src.session import engine
 from flask import Flask, jsonify
 
 application = Flask(__name__)

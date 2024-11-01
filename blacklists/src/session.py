@@ -1,7 +1,5 @@
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy import create_engine
-import os
-
 
 class SessionConfig():
     def __init__(self):

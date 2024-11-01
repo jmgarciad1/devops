@@ -7,7 +7,6 @@ from flask import Flask, jsonify
 application = Flask(__name__)
 application.register_blueprint(blacklists_blueprint)
 
-Base.metadata.drop_all(bind=engine)
 Base.metadata.create_all(engine)
 
 @application.errorhandler(ApiError)

@@ -8,9 +8,10 @@ phases:
   build:
     commands:
       - echo Build started on `date`
-      - echo Building the Docker image...          
+      - echo Building the Docker image...
       - docker build -t python-app .
       - docker tag python-app:latest 724772057993.dkr.ecr.us-east-1.amazonaws.com/python-app:latest
+      - python -m unittest -v blacklists/tests/test_main.py
   post_build:
     commands:
       - echo Build completed on `date`

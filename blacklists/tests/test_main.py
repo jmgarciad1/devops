@@ -8,7 +8,7 @@ class TestBlacklist(unittest.TestCase):
     def test_create_blacklist(self):
         blacklist = TestCreateBlacklist().create_blacklist()
 
-        self.assertEqual(blacklist['message'], 'Item createdx')
+        self.assertEqual(blacklist['message'], 'Item created')
 
     def test_get_blacklist_not_exist_email(self):
         blacklist = TestGetBlacklist().get_blacklist_exist_email('email_xxx@gmail.com')

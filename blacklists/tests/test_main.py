@@ -1,5 +1,6 @@
 from blacklists.tests.commands.test_create_blacklist import TestCreateBlacklist
 from blacklists.tests.commands.test_get_blacklist import TestGetBlacklist
+
 import unittest
 
 class TestBlacklist(unittest.TestCase):    

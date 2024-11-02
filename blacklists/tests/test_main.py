@@ -1,5 +1,5 @@
-from blacklists.tests.test_create_blacklist import TestCreateBlacklist
-from blacklists.tests.test_get_blacklist import TestGetBlacklist
+from blacklists.tests.commands.test_create_blacklist import TestCreateBlacklist
+from blacklists.tests.commands.test_get_blacklist import TestGetBlacklist
 
 import unittest
 

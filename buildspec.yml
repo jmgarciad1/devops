@@ -9,14 +9,14 @@ phases:
     commands:
       - echo Build started on `date`
       - echo Building the Docker image...
-      - docker build -t python-app .
-      - docker tag python-app:latest 724772057993.dkr.ecr.us-east-1.amazonaws.com/python-app:latest
+      - docker build -t python_app_entrega_2 .
+      - docker tag python_app_entrega_2:latest 724772057993.dkr.ecr.us-east-1.amazonaws.com/python_app_entrega_2:latest
       - python -m unittest -v blacklists/tests/test_main.py
   post_build:
     commands:
       - echo Build completed on `date`
       - echo Pushing the Docker image...
-      - docker push 724772057993.dkr.ecr.us-east-1.amazonaws.com/python-app:latest
+      - docker push 724772057993.dkr.ecr.us-east-1.amazonaws.com/python_app_entrega_2:latest
 artifacts:
   files:
     - '**/*'
